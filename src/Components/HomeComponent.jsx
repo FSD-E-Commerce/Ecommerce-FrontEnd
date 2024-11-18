@@ -6,6 +6,7 @@ import FooterComp from "./FooterComponent";
 // import CopyCard from "./CardComponent";
 // import CardData from "./CardComponent";
 import ReusableCard from "./CardComponent";
+import AccessoriesSection from "./AccessoriesComponent";
 
 const HelmetsAndAccessories =()=>{
 
@@ -72,6 +73,9 @@ return(
         </section>
         <section>
           <ReusableCard/>
+        </section>
+        <section>
+          <AccessoriesSection/>
         </section>
     </main>
     <footer>

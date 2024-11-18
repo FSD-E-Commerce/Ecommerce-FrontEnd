@@ -1,9 +1,13 @@
 import React from "react";
-import Image1 from "../assests/exhaust.png";
-import Image2 from "../assests/foglight.png";
-import Image3 from "../assests/tail-tidy.png";
+// import Image1 from "../assests/exhaust.png";
+// import Image2 from "../assests/foglight.png";
+// import Image3 from "../assests/tail-tidy.png";
 
-const Access1 = () => {
+const AccessoriesSection = () => {
+
+const images=["https://wallpapercave.com/wp/wp3852708.jpg","https://m.media-amazon.com/images/I/716eiKzBMxL._SL1500_.jpg",
+ " https://evotech-performance.com/cdn/shop/products/EVOTECH-2022-Ducati-Panigale-V4S-Tail-Tidy-L1190823_80300aed-e7c9-4540-8d45-cf79d88d1c5a_grande.jpg"]
+
   return (
     <div className="px-5 md:px-0">
       <h1 className="px-4 py-5 text-center text-2xl">Accessories</h1>
@@ -17,7 +21,7 @@ const Access1 = () => {
             <p>Offer</p>
           </div>
           <img
-            src={Image1}
+            src={images[0]}
             alt="Exhaust"
             className="m-2 border-4 rounded-xl outline-none w-full md:w-49"
           />
@@ -32,7 +36,7 @@ const Access1 = () => {
             <p>Offer</p>
           </div>
           <img
-            src={Image2}
+            src={images[1]}
             alt="Fog Light"
             className="m-2 border-4 rounded-xl outline-none w-full md:w-49"
           />
@@ -47,7 +51,7 @@ const Access1 = () => {
             <p>Offer</p>
           </div>
           <img
-            src={Image3}
+            src={images[2]}
             alt="Tail Tidy"
             className="m-2 border-4 rounded-xl outline-none w-full md:w-49"
           />
@@ -58,4 +62,4 @@ const Access1 = () => {
   );
 };
 
-export default Access1;
+export default AccessoriesSection;
