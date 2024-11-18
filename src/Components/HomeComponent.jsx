@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import NavBarcomp from "./NavBarComponent2";
 import { Fragment } from "react";
-
+import FooterComp from "./FooterComponent";
 
 const HelmetsAndAccessories =()=>{
 
@@ -68,6 +68,9 @@ return(
           <HelmetsAndAccessories/>
         </section>
     </main>
+    <footer>
+    <FooterComp/>
+    </footer>
     </>
 )    
 

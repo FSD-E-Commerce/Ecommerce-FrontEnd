@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 // import NavBarcomp from "./NavBarComponent2";
 import NotFoundPage from "./PageNotFound";
 import Home from "./HomeComponent";
-import FooterComp from "./FooterComponent";
+//import FooterComp from "./FooterComponent";
 
 const ParentRouter = () => {
     return (
@@ -13,7 +13,7 @@ const ParentRouter = () => {
           <Route path="*" element={<NotFoundPage/>} />
           {/* <Route index element={<Home/>}/> */}
           <Route index element={<Home/>}/>
-          <Route path="/home" element={<FooterComp/>} />
+      
           
         </Routes>
     );
