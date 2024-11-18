@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 // import { Navbar } from "./NavbarComponent";
 // import Home from "./HomeComponent";
-import NavBarcomp from "./NavBarComponent2";
+// import NavBarcomp from "./NavBarComponent2";
 import NotFoundPage from "./PageNotFound";
+import Home from "./HomeComponent";
 
 const ParentRouter = () => {
     return (
@@ -10,7 +11,7 @@ const ParentRouter = () => {
         <Routes>
           <Route path="*" element={<NotFoundPage/>} />
           {/* <Route index element={<Home/>}/> */}
-          <Route index element={<NavBarcomp/>}/>
+          <Route index element={<Home/>}/>
           
         </Routes>
     );

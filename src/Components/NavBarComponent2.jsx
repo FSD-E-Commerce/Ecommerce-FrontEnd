@@ -21,26 +21,26 @@ const NavBarcomp = () => {
   const location = useLocation();
 
   return (
-    <nav className="w-full h-[60px] shadow-xl px-7 shadow-slate-600 flex flex-row justify-between items-center">
+    <nav className="w-full min-h-20 px-7 flex flex-row flex-wrap justify-between items-center shadow-md shadow-gray-800">
+      <div className="w-[20%] h-full">
       <Link to={"/"}>
-        <div>
           <img
             src={HeaderLogo}
             alt="logo"
-            className="w-52 h-10 cursor-pointer"
+            className="w-[200px] h-fit  cursor-pointer"
           />
-        </div>
       </Link>
-
-      <div className="flex flex-row justify-center gap-5">
+      </div>
+      <div className="w-[60%] font-medium h-full flex flex-row justify-center items-center gap-5">
         {navMenuList.map((value, index) => (
           <Link key={index} to={value.path}>
             <span
-              className={`py-2 rounded font-bold px-2 ${
+              className={`px-2 py-1.5 ${
                 value.path === location.pathname
-                  ? "bg-blue-700 text-white"
-                  : "bg-white text-blue-500"
-              }`}
+                  ? "rounded-md bg-gradient-to-r from-[#058CA6] to-[#0E4257] text-white border-b-[3px] border-b-[#0E4257]"
+                  : " text-[#0E4257]"
+              }
+              text-black font-medium hover:rounded-none hover:border-solid hover:border-b-[3px] hover:border-b-[#0E4257] `}
             >
               {value.page}
             </span>
@@ -48,11 +48,11 @@ const NavBarcomp = () => {
         ))}
       </div>
 
-      <div className="flex flex-row justify-center gap-4">
-        <CgProfile className="text-xl text-blue-950 cursor-pointer" />
+      <div className="w-[20%] h-full flex flex-row justify-end items-center gap-4">
+      <BsSearch className="text-xl text-blue-950 cursor-pointer" />
         <GoHeart className="text-xl text-blue-950 cursor-pointer" />
         <IoCartOutline className="text-xl text-blue-950 cursor-pointer" />
-        <BsSearch className="text-xl text-blue-950 cursor-pointer" />
+        <CgProfile className="text-xl text-blue-950 cursor-pointer" />
       </div>
     </nav>
   );
