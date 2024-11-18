@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import NavBarcomp from "./NavBarComponent2";
 import { Fragment } from "react";
 import FooterComp from "./FooterComponent";
+// import CopyCard from "./CardComponent";
+// import CardData from "./CardComponent";
+import ReusableCard from "./CardComponent";
 
 const HelmetsAndAccessories =()=>{
 
@@ -66,6 +69,9 @@ return(
         </section>
         <section>
           <HelmetsAndAccessories/>
+        </section>
+        <section>
+          <ReusableCard/>
         </section>
     </main>
     <footer>
