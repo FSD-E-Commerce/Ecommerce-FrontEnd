@@ -3,138 +3,127 @@ import { FaCartPlus, FaRegHeart } from "react-icons/fa";
 import { IoStarHalfOutline, IoStarSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
-
-
 const CardMaping = ({ carddata }) => {
-    const {image , brand ,sparename ,discription , rating, price, path} = carddata;
+  const { image, brand, sparename, discription,price, path } =
+    carddata;
 
-    return (
-      <div class=" flex justify-center items-center min-h-screen shadow-lg shadow-black  rounded-xl">
-        <div class="max-w-[720px] mx-auto  shadow-gray-400  shadow-lg  rounded-xl">
-          <div class="relative flex max-w-[20rem] flex-col overflow-hidden rounded-xl shadow-lg shadow-[#0E4257] text-gray-700 ">
-            <div class="  overflow-hidden text-gray-700 bg-transparent rounded-xl ">
-             
-              <img
-                src={image}
-                alt="ui/ux review check"
-                className="p-3 rounded-xl top-4"
-              />
-           
-              <div className="heart relative left-[280px] flex items-center -space-x-1  h-8 w-9 bg-white   object-cover object-center rounded-full hover:scale-125  hover:text-[#0E4257]">
-                  <FaRegHeart className="text-lg relative  ml-1 "/>
-              </div>
-           
-               <div class="px-3">
-                <p class="block mt-2 font-sans text-sm   text-gray-700">{brand}</p>
-                <h4 class="block font-sans text-xl font-semibold  text-blue-gray-900">
-                 {sparename}
-                </h4>
-              </div>
-              <p class="block mt-2 px-3 font-sans text-sm  font-normal  text-gray-700">
-               {discription}
-              </p>
-  
-              <div className="w-[330px]  h-[18px] flex justify-start  items-center space-x-8 py-5 mb-6 px-3 ">
-                <div>
-                  <p className=" font-semibold">Ratings</p>
-                </div>
-                <div className=" flex">
-                  <IoStarSharp />
-                  <IoStarSharp />
-                  <IoStarSharp />
-                  <IoStarSharp />
-                  <IoStarHalfOutline /> 
-                  {rating}
-                </div>
-              </div>
-             
+  return (
+    <>
+      <div class="w-[350px] max-h-[500px] flex flex-col overflow-hidden rounded-xl shadow-lg shadow-[#0E4257] text-gray-700 ">
+       
+        <div class="w-full h-[380px] relative overflow-hidden text-gray-700 bg-transparent rounded-xl ">
+          <img
+            src={image}
+            alt="ui/ux review check"
+            className="w-full h-[60%] px-4 py-4 rounded-xl"
+          />
+          <div className="flex justify-center items-center h-8 w-9 absolute top-5 right-5  bg-[#0E4257] rounded-[10px] hover:scale-125  hover:text-[#0E4257]">
+            <FaRegHeart className="text-lg text-white" />
+          </div>
+
+          <div class="w-full h-[30%] px-3 flex flex-col items-start justify-center gap-0">
+            <div className="w-full h-[50%] flex flex-col items-start justify-center ">
+              <p class="text-sm text-[#0E4257]">{brand}</p>
+              <h4 class="text-xl font-semibold">
+                {sparename}
+              </h4>
+            </div >
+            <p class="w-full h-[50%] font-normal text-sm text-justify text-black">{discription}</p>
+          </div>
+
+            <div className="w-full h-[10%] flex items-start justify-start px-3 gap-1">
+              <IoStarSharp className="text-xl" />
+              <IoStarSharp className="text-xl"/>
+              <IoStarSharp className="text-xl"/>
+              <IoStarSharp className="text-xl" />
+              <IoStarHalfOutline className="text-xl" />
+
             </div>
-            
-            <div class="flex items-center justify-around p-3 bg-gradient-to-r from-[#0E4257] to-[#058CA6]
-             ">
-            <div className=" w-[90px] h-[35px] px-3 relative bottom-[-40] text">
-                <h2 className=" text-white text-lg"> <span className=" font-bold text-lg">RS:</span>{price}</h2>
-              </div>
+        </div>
+
+        <div
+          class="relative w-full h-[80px] px-7 flex items-center justify-between  bg-gradient-to-r from-[#0E4257] to-[#058CA6]
+             "
+        >
+             <div className="w-[30%] h-full text-white flex justify-center items-center gap-1">
+             <span className=" font-bold text-lg">RS :</span>
+             <span className="text-xl">{price}</span>
+             </div>
              
-             
-              <div class=" relative top-[-30px] flex items-center -space-x-2  h-10 w-10 bg-white border-4   border-[#0E4257]  object-cover object-center rounded-full hover:scale-125 hover:border-[#058CA6]  ">
-                <FaCartPlus class="relative text-xl  ml-1 " />
-              </div>
-              <div >
-                <Link to={path} >
-                <button className="w-[90px] h-[35px] border  bg-white  rounded-lg text-[#0E4257] font-medium text-sm  ">BUY NOW </button>
-                </Link>
-                 
-              </div>
-            </div>
+          <div class="absolute -top-5 left-40 flex items-center h-10 w-10 bg-white border-4 border-[#0E4257]  rounded-full hover:scale-125 hover:border-[#058CA6]  ">
+            <FaCartPlus class="text-xl  ml-1" />
+          </div>
+
+          <div className="w-[30%] h-full flex items-center justify-center">
+            <Link to={path}>
+              <button className="px-2 py-2 border bg-white rounded-lg text-[#0E4257] font-semibold text-sm  ">
+                BUY NOW
+              </button>
+            </Link>
           </div>
         </div>
       </div>
-    );
-  };
+    </>
+  );
+};
 
+const ReusableCard = () => {
+  const data = [
+    {
+      image:
+        "https://imgd.aeplcdn.com/476x268/n/cw/ec/103795/yzf-r15-front-suspension-preload-adjuster.jpeg",
+      brand: "HERO",
+      sparename: "DOME",
+      discription:
+        "Hero Honda Cbz Xtreme Bike Spare Parts - Safexbikes Motorcycle Superstore",
+      rating: 3,
+      price: 3000,
+      path: "/prod-1",
+    },
+    {
+      image:
+        "https://www.carparts.com/blog/wp-content/uploads/2020/03/timing-chain-system-1024x683.jpeg",
+      brand: "HONDA",
+      sparename: "ENGNEE",
+      discription:
+        "The GX160’s 1/2 reduction mechanism is specifically developed for long-tail",
+      rating: 4,
+      price: 8000,
+      path: "/prod-2",
+    },
+    {
+      image:
+        "https://imgd.aeplcdn.com/476x268/n/cw/ec/103795/yzf-r15-rear-disc-brake.jpeg",
+      brand: "YAMAHA",
+      sparename: "BRAKE SPARE",
+      discription:
+        "Conversely, a lower final drive ratio will lead to slower initial acceleration.....",
+      rating: 2,
+      price: 2000,
+      path: "/prod-3",
+    },
+    {
+      image:
+        "https://i.pinimg.com/originals/77/6e/38/776e389b1783f0af7cb1dd3f6dff1c78.jpg",
+      brand: "DUKE",
+      sparename: "CHAINSPRAKET",
+      discription:
+        "Hero Honda Cbz Xtreme Bike Spare Parts - Safexbikes Motorcycle Superstore",
+      rating: 3,
+      price: 5000,
+      path: "/prod-4",
+    },
+  ];
 
-
-
- const ReusableCard = () => {
-    const data = [
-      {
-        image:
-          "https://www.pngkey.com/png/detail/253-2538497_hero-honda-cbz-xtreme-bike-spare-parts-safexbikes.png",
-        brand: "HERO",
-        sparename: "DOME",
-        discription:
-          "Hero Honda Cbz Xtreme Bike Spare Parts - Safexbikes Motorcycle Superstore",
-        rating: 3,
-        price: 3000,
-        path: "/prod-1",
-      },
-      {
-        image:
-          "https://c0.klipartz.com/pngpicture/404/834/gratis-png-scooter-moto-accesorios-motor-estator-motor-thumbnail.png",
-        brand: "HONDA",
-        sparename: "ENGNEE",
-        discription:
-          "The GX160’s 1/2 reduction mechanism is specifically developed for long-tail boats operating",
-        rating: 4,
-        price: 8000,
-        path: "/prod-2",
-      },
-      {
-        image:
-          "https://pikpart.s3.ap-south-1.amazonaws.com/productCategoryIcon/BRAKESHOE-SPLENDOR-REAR.png",
-        brand: "susiki",
-        sparename: "BRAKE SPARE",
-        discription:
-          "Conversely, a lower final drive ratio will lead to slower initial acceleration, but a higher top speed. In general,",
-        rating: 2,
-        price: 2000,
-        path: "/prod-3",
-      },
-      {
-        image:
-          "https://p7.hiclipart.com/preview/470/228/921/spare-part-motorcycle-engine-machine-engine-thumbnail.jpg",
-        brand: "DUKE",
-        sparename: "CHAINSPRAKET",
-        discription:
-          "Hero Honda Cbz Xtreme Bike Spare Parts - Safexbikes Motorcycle Superstore",
-        rating: 3,
-        price: 5000,
-        path: "/prod-4",
-      },
-    ];
-
-    return (
-      <>
-        <div className="w-[100%] flex gap-[30px] justify-center items-center">
-          {data.map((value, index) => (
-            <CardMaping key={index} carddata={value} />
-          ))}
-        </div>
-      </>
-    );
-  }
-
-
+  return (
+    <>
+      <div className="w-full h-full flex justify-center items-center flex-wrap gap-6">
+        {data.map((value, index) => (
+          <CardMaping key={index} carddata={value} />
+        ))}
+      </div>
+    </>
+  );
+};
 
 export default ReusableCard;
