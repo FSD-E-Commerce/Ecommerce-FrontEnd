@@ -6,7 +6,7 @@ const Navbar = () => {
     const location = useLocation();
   
     const menuList = [
-      { page: "Home", path: "/" },
+      { page: "Home", path: "/home" },
       { page: "Spares By Bike", path: "/sparesbybike" },
       { page: "Luggage", path: "/luggage" },
       { page: "Accessories", path: "/accessories" },
