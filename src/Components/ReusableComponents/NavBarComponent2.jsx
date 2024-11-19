@@ -21,7 +21,7 @@ const NavBarcomp = () => {
   const location = useLocation();
 
   return (
-    <nav className="w-full min-h-20 px-7 flex flex-row flex-wrap justify-between items-center shadow-md shadow-gray-800">
+    <nav className="fixed top-0 z-20 bg-white w-full min-h-20 px-7 flex flex-row flex-wrap justify-between items-center shadow-md shadow-gray-800">
       <div className="w-[20%] h-full">
       <Link to={"/"}>
           <img
