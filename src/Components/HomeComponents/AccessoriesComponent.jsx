@@ -5,6 +5,7 @@ import {
   LightVarient,
   WhiteVarient,
 } from "../ColorComponent/ColorComponent";
+import { Link } from "react-router-dom";
 
 const AccessoriesSection = () => {
   const data = [
@@ -34,7 +35,8 @@ const AccessoriesSection = () => {
       
         {data.map((value, index) => (
           <Fragment key={index}>
-            <div className="relative min-w-[450px] min-h-[300px] flex flex-col justify-center items-center">
+            <Link to={"/accessories"}>
+            <div className="hover:scale-105 hover:delay-150 hover:ease-out hover:duration-150 relative min-w-[450px] min-h-[300px] flex flex-col justify-center items-center">
                 <img
                   src={value.image}
                   alt="Exhaust"
@@ -51,7 +53,7 @@ const AccessoriesSection = () => {
                 {value.name}
               </h3>
               </div>
-          
+              </Link>
           </Fragment>
         ))}
       </div>

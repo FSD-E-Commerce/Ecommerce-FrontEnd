@@ -16,19 +16,19 @@ const HelmetsAndAccessories = () => {
   
     return (
       <div>
-        <div className="px-3 w-full h-full flex-wrap mt-24 mb-24 flex items-center gap-3 justify-evenly hover:duration-700 hover:ease-in-out hover:transition-transform">
+        <div className="px-3 w-full h-full flex-wrap mt-24 mb-24 flex items-center gap-3 justify-evenly">
           {data.map((values, index) => (
             <Fragment key={index}>
-              <div className="relative min-h-[400px] rounded-xl min-w-[160px] bg-[url('https://wallpapercave.com/wp/wp7610068.jpg')] bg-cover bg-no-repeat flex items-end grow hover:grow-[100] ">
-                <div className="w-full bottom-0 h-full absolute opacity-0 hover:opacity-100">
+              <div className="relative min-h-[400px] rounded-xl min-w-[160px] bg-[url('https://wallpapercave.com/wp/wp7610068.jpg')] bg-cover bg-no-repeat flex items-end grow hover:grow-[100] hover:duration-300 hover:delay-200 hover:ease-in-out ">
+                <div className="w-full bottom-0 h-full absolute opacity-0 hover:opacity-100 hover:duration-300 hover:delay-200 hover:ease-in-out">
                   <div className={`w-full h-[20%] rounded-lg  bg-gradient-to-r to-[${LightVarient()}] from-[${DarkVarient()}] absolute bottom-0 flex items-center justify-evenly`}>
-                    <span className={` w-[50%] h-full py-2 rounded flex items-center justify-start text-lg font-medium text-${WhiteVarient()}`}>
+                    <div className={` w-[50%] h-full py-2 rounded flex items-center justify-start text-lg font-medium text-${WhiteVarient()}`}>
                       {values.name}
-                    </span>
+                    </div>
                     <Link to={values.path}>
-                      <span className={`w-[50%] h-full bg-${WhiteVarient()} text-[${DarkVarient()}] px-3 py-2 rounded-lg hover:shadow-lg hover:shadow-${BlackVarient()}`}>
+                      <div className={`w-[100px] flex items-center justify-center hover:scale-110 hover:delay-100 hover:duration-150 hover:ease-in-out bg-${WhiteVarient()} text-[${DarkVarient()}] py-2 rounded-lg hover:shadow-md hover:shadow-${BlackVarient()}`}>
                         Shop Now
-                      </span>
+                      </div>
                     </Link>
                   </div>
                 </div>

@@ -57,7 +57,7 @@ const CardMaping = ({ carddata }) => {
 
           <div className="w-[30%] h-full flex items-center justify-center">
             <Link to={path}>
-              <button className={`px-2 py-2 border bg-${WhiteVarient()} rounded-lg text-[${DarkVarient()}] font-semibold text-sm  `}>
+              <button className={`px-2 py-1.5 hover:scale-110 border bg-${WhiteVarient()} rounded-lg text-[${DarkVarient()}] font-semibold text-sm  `}>
                 BUY NOW
               </button>
             </Link>
