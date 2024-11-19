@@ -21,17 +21,17 @@ const NavBarcomp = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 z-20 bg-white w-full min-h-20 px-7 flex flex-row flex-wrap justify-between items-center shadow-md shadow-gray-800">
-      <div className="w-[20%] h-full">
-      <Link to={"/"}>
+    <nav className="fixed top-0 z-20 bg-white w-full min-h-20 px-7 flex flex-row gap-5 flex-wrap justify-between items-center shadow-md shadow-gray-800">
+      <div className="w-[200px] h-full">
+        <Link to={"/"}>
           <img
             src={HeaderLogo}
             alt="logo"
             className="w-[200px] h-fit  cursor-pointer"
           />
-      </Link>
+        </Link>
       </div>
-      <div className="w-[60%] font-medium h-full flex flex-row justify-center items-center gap-5">
+      <div className="w-[900px] font-medium h-full flex flex-row flex-wrap justify-center items-center gap-5">
         {navMenuList.map((value, index) => (
           <Link key={index} to={value.path}>
             <span
@@ -48,8 +48,8 @@ const NavBarcomp = () => {
         ))}
       </div>
 
-      <div className="w-[20%] h-full flex flex-row justify-end items-center gap-4">
-      <BsSearch className="text-xl text-blue-950 cursor-pointer" />
+      <div className="w-[150px] h-full flex flex-row justify-end items-center gap-4">
+        <BsSearch className="text-xl text-blue-950 cursor-pointer" />
         <GoHeart className="text-xl text-blue-950 cursor-pointer" />
         <IoCartOutline className="text-xl text-blue-950 cursor-pointer" />
         <CgProfile className="text-xl text-blue-950 cursor-pointer" />
