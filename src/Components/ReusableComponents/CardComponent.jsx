@@ -2,16 +2,15 @@ import React from "react";
 import { FaCartPlus, FaRegHeart } from "react-icons/fa";
 import { IoStarHalfOutline, IoStarSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import { DarkVarient ,LightVarient, WhiteVarient,BlackVarient} from "../ColorComponent/ColorComponent";
+import { BlackVarient, DarkVarient, LightVarient, WhiteVarient } from "../ColorComponent/ColorComponent";
+// import { DarkVarient ,LightVarient, WhiteVarient,BlackVarient} from "../ColorComponent/ColorComponent";
 
 const CardMaping = ({ carddata }) => {
   const { image, brand, sparename, discription,price, path } =
     carddata;
-console.log(DarkVarient());
-
   return (
     <>
-      <div class={`w-[330px] max-h-[500px] flex flex-col overflow-hidden rounded-xl shadow-lg shadow-[${DarkVarient()}] text-[${DarkVarient()}] `}>
+      <div class={`w-[330px] max-h-[500px] flex flex-col overflow-hidden rounded-xl shadow-lg shadow-${BlackVarient()} text-[${DarkVarient()}] `}>
        
         <div class={`w-full h-[380px] relative overflow-hidden text-${DarkVarient()} bg-transparent rounded-xl `}>
           <img
@@ -19,8 +18,8 @@ console.log(DarkVarient());
             alt="ui/ux review check"
             className="w-full h-[60%] px-4 py-4 rounded-xl"
           />
-          <div className={`flex justify-center items-center h-8 w-9 absolute top-5 right-5  bg-[${DarkVarient()}] rounded-[10px] hover:scale-125  hover:text-[${DarkVarient()}]`}>
-            <FaRegHeart className={`text-lg text-${WhiteVarient()}`} />
+          <div className={`flex justify-center items-center h-8 w-9 absolute top-5 right-5  bg-${WhiteVarient()} rounded-[10px] hover:scale-125  hover:text-[${DarkVarient()}]`}>
+            <FaRegHeart className={`text-lg text-${DarkVarient()}`} />
           </div>
 
           <div class="w-full h-[30%] px-3 flex flex-col items-start justify-center gap-0">
@@ -52,7 +51,7 @@ console.log(DarkVarient());
              <span className="text-xl">{price}</span>
              </div>
              
-          <div class={`absolute -top-5 left-36 flex items-center h-10 w-10 bg-${WhiteVarient()} border-4 border-[${DarkVarient()}]  rounded-full hover:scale-125 hover:border-[${LightVarient()}]  `}>
+          <div class={`absolute -top-5 left-36 flex items-center h-10 w-10 bg-${WhiteVarient()} border-4 border-[${LightVarient()}]  rounded-full hover:scale-125 hover:border-[${DarkVarient()}]  `}>
             <FaCartPlus class="text-xl  ml-1" />
           </div>
 
