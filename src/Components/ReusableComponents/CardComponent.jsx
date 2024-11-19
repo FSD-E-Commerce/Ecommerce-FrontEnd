@@ -10,7 +10,7 @@ const CardMaping = ({ carddata }) => {
     carddata;
   return (
     <>
-      <div class={`w-[330px] max-h-[500px] flex flex-col overflow-hidden rounded-xl shadow-lg shadow-${BlackVarient()} text-[${DarkVarient()}] `}>
+      <div class={`w-[330px] max-h-[500px] flex flex-col overflow-hidden rounded-xl shadow-lg shadow-black text-[${DarkVarient()}] `}>
        
         <div class={`w-full h-[380px] relative overflow-hidden text-${DarkVarient()} bg-transparent rounded-xl `}>
           <img
@@ -43,19 +43,19 @@ const CardMaping = ({ carddata }) => {
         </div>
 
         <div
-          class={`relative w-full h-[80px] px-7 flex items-center justify-between  bg-gradient-to-r from-[${DarkVarient()}] to-[${LightVarient()}]
+          class={`relative w-[330px] h-[80px] px-7 flex items-center justify-between  bg-gradient-to-r from-[${DarkVarient()}] to-[${LightVarient()}]
              `}
         >
-             <div className={`w-[30%] h-full text-${WhiteVarient()} flex justify-center items-center gap-1`}>
+             <div className={`w-[40%] h-full text-${WhiteVarient()} flex justify-center items-center gap-1`}>
              <span className=" font-bold text-lg">RS :</span>
              <span className="text-xl">{price}</span>
              </div>
              
-          <div class={`absolute -top-5 left-36 flex items-center h-10 w-10 bg-${WhiteVarient()} border-4 border-[${LightVarient()}]  rounded-full hover:scale-125 hover:border-[${DarkVarient()}]  `}>
+          <div class={` absolute -top-5 left-36 flex items-center h-10 w-10 bg-${WhiteVarient()} border-4 border-[${LightVarient()}]  rounded-full hover:scale-125 hover:border-[#0E4257]  `}>
             <FaCartPlus class="text-xl  ml-1" />
           </div>
 
-          <div className="w-[30%] h-full flex items-center justify-center">
+          <div className="w-[40%] h-full flex items-center justify-center">
             <Link to={path}>
               <button className={`px-2 py-1.5 hover:scale-110 border bg-${WhiteVarient()} rounded-lg text-[${DarkVarient()}] font-semibold text-sm  `}>
                 BUY NOW
