@@ -147,8 +147,8 @@ const FooterComp = () => {
         </div>
       </div>
 
-      <div className="w-full min-h-[80px] px-20 bg-gradient-to-b from-[#0E4257] to-[#058CA6] flex flex-row justify-between text-gray-300 items-center">
-        <div className="w-[300px] flex flex-col items-center justify-start gap-[8px]">
+      <div className="w-full min-h-[80px] px-20 bg-gradient-to-b from-[#0E4257] to-[#058CA6] flex flex-row flex-wrap gap-5 justify-between text-gray-300 items-center">
+        <div className="w-[400px] flex flex-col items-center justify-start gap-[8px]">
           <p
             className="flex gap-2 font-[500]"
             style={{ textShadow: "3px 3px 4px #000000" }}
@@ -160,7 +160,7 @@ const FooterComp = () => {
           </p>
           <p>91+ 8344024735</p>
         </div>
-        <div className="w-[500px] h-full border-r-2 border-l-2 border-black flex flex-col items-center justify-start gap-[8px]">
+        <div className="w-[400px] h-full border-r-2 border-l-2 border-black flex flex-col items-center justify-start gap-[8px]">
           <p
             className="flex gap-2 font-[500]"
             style={{ textShadow: "3px 3px 4px #000000" }}
@@ -172,14 +172,14 @@ const FooterComp = () => {
           </p>
           <p>yesspares@gmail.com</p>
         </div>
-        <div className=" w-[300px] justify-center items-center flex flex-col gap-3">
+        <div className=" w-[400px] justify-center items-center flex flex-col gap-3">
           <p
             className="font-[500]"
             style={{ textShadow: "3px 3px 4px #000000" }}
           >
             STAY IN TOUCH
           </p>
-          <div className="flex flex-row justify-center text-xl items-center text-black gap-6 text-[1.40rem]">
+          <div className="flex flex-row flex-wrap justify-center text-xl items-center text-black gap-6 text-[1.40rem]">
             <FaXTwitter />
             <RiInstagramFill />
             <FaFacebookF />
