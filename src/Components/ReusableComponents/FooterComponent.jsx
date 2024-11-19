@@ -134,7 +134,7 @@ const FooterContact = () => {
 
 const FooterComp = () => {
   return (
-    <div className="w-full min-h-[200px] flex flex-col justify-center pt-5 items-center bg-gray-200 drop-shadow-md gap-4">
+    <div className="w-full min-h-[200px] mt-36 flex flex-col justify-center pt-5 items-center bg-gray-200 drop-shadow-md gap-4">
       <div className="flex flex-row flex-wrap w-full justify-center h-full gap-9">
         <div className="w-[340px] text-justify h-full">
           <FooterAbout />

@@ -10,7 +10,7 @@ const CardMaping = ({ carddata }) => {
     carddata;
   return (
     <>
-      <div class={`w-[330px] max-h-[500px] flex flex-col overflow-hidden rounded-xl shadow-lg shadow-black text-[${DarkVarient()}] `}>
+      <div class={`w-[330px] max-h-[500px] mt-20 flex flex-col overflow-hidden rounded-xl shadow-lg shadow-black text-[${DarkVarient()}] `}>
        
         <div class={`w-full h-[380px] relative overflow-hidden text-${DarkVarient()} bg-transparent rounded-xl `}>
           <img

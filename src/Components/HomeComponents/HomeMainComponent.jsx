@@ -4,23 +4,35 @@ import HeroSection from "./HeroSectionComponent";
 import NavBarcomp from "../ReusableComponents/NavBarComponent2";
 import FooterComp from "../ReusableComponents/FooterComponent";
 import ReusableCard from "../ReusableComponents/CardComponent";
+import SupportHome from "./SupportComponent";
+import SearchByBike from "./SearchByBikeComponent";
+import HomeRegister from "./RegisterComponent";
 
 const Home = () => {
   return (
     <>
       <NavBarcomp />
-      <main className="relative top-20">
+      <main className="relative top-16">
         <section>
           <HeroSection/>
         </section>
         <section>
-          <HelmetsAndAccessories />
+          <SearchByBike/>
         </section>
         <section>
           <ReusableCard />
         </section>
         <section>
+          <HelmetsAndAccessories />
+        </section>
+        <section>
           <AccessoriesSection />
+        </section>
+        <section>
+          <SupportHome/>
+        </section>
+        <section>
+          <HomeRegister/>
         </section>
       </main>
       <footer>

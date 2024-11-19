@@ -1,6 +1,5 @@
 // import { Carousel } from "@material-tailwind/react";
-import { DarkVarient, LightVarient, WhiteVarient } from "../ColorComponent/ColorComponent"
-// import { Carousel } from "@material-tailwind/react";
+import { DarkVarient, LightVarient, WhiteVarient } from "../ColorComponent/ColorComponent";
  
 
 
@@ -37,10 +36,10 @@ const HeroSection = () =>{
 
 return(
 
-    <div className={`w-full mt-5 h-[100vh] bg-${WhiteVarient()} flex justify-center items-center`}>
+    <div className={`w-full mt-5 h-[90vh] bg-${WhiteVarient()} flex justify-center items-center`}>
           <div
             className={`
-           w-[90%] h-[90%] rounded-3xl bg-gradient-to-r from-[${LightVarient()}] to-[${DarkVarient()}]`}
+           w-[90%] h-[95%] rounded-3xl bg-gradient-to-r from-[${LightVarient()}] to-[${DarkVarient()}]`}
           ></div>
           
         </div>

@@ -23,16 +23,11 @@ const AccessoriesSection = () => {
   ];
 
   return (
-
-    <div className="w-full h-full xl:h-[650px] lg:h-[1000px] md:h-[1000px] sm:h-[1350px] mt-20 py-10 flex flex-col items-center flex-wrap justify-center">
-    
+    <div className="w-full h-full 2xl:h-[500px] xl:h-[500px] lg:h-[800px] md:h-[1150px] sm:h-[1150px] py-10 flex flex-col items-center flex-wrap justify-center">
       <h1 className="w-full h-fit px-4 py-5 text-left text-2xl font-medium">
         Accessories
       </h1>
       <div className="w-full h-fit flex flex-row items-center flex-wrap justify-evenly gap-10">
-      {/* <div className="min-w-[450px] h-fit grid grid-cols-3 gap-5 "> */}
-      
-      
         {data.map((value, index) => (
           <Fragment key={index}>
             <Link to={"/accessories"}>
