@@ -31,20 +31,20 @@ const AccessoriesSection = () => {
         {data.map((value, index) => (
           <Fragment key={index}>
             <Link to={"/accessories"}>
-            <div className="hover:scale-105 hover:delay-150 hover:ease-out hover:duration-150 relative min-w-[450px] min-h-[300px] flex flex-col justify-center items-center">
+            <div className="max-sm:w-[300px] hover:scale-105 hover:delay-150 hover:ease-out hover:duration-150 relative min-w-[450px] min-h-[300px] flex flex-col justify-center items-center">
                 <img
                   src={value.image}
                   alt="Exhaust"
-                  className={`min-h-[300px] bg-${BlackVarient()} w-full rounded-lg absolute top-0 left-0 right-0 bottom-0`}
+                  className={`min-h-[300px] max-sm:w-[300px] max-sm:h-[200px] bg-${BlackVarient()} w-full rounded-lg absolute top-0 sm:max-2xl:right-0 sm:max-2xl:left-0 bottom-0`}
                 />
                 <div
-                  className={`min-w-[80px] top-4 left-4 py-4 flex flex-col items-center justify-evenly absolute bg-gradient-to-r from-[${DarkVarient()}] to-[${LightVarient()}] outline-none rounded-xl text-${WhiteVarient()}`}
+                  className={`min-w-[80px] max-sm:left-24 top-4 left-4 py-4 flex flex-col items-center justify-evenly absolute bg-gradient-to-r from-[${DarkVarient()}] to-[${LightVarient()}] outline-none rounded-xl text-${WhiteVarient()}`}
                 >
                   <p>Upto</p>
                   <p>10%</p>
                   <p>Offer</p>
                 </div>
-                <h3 className={`absolute bottom-0 text-${WhiteVarient()} text-center text-xl font-semibold py-5 w-full min-h-[20%]`}>
+                <h3 className={`absolute max-sm:w-[300px] bottom-0 text-${WhiteVarient()} text-center text-xl font-semibold py-5 w-full min-h-[20%]`}>
                 {value.name}
               </h3>
               </div>

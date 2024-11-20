@@ -1,11 +1,11 @@
 // import { CardMedia } from "@mui/material";
 import React from "react";
-import { BsSearch } from "react-icons/bs";
-import { CgProfile } from "react-icons/cg";
-import { GoHeart } from "react-icons/go";
-import { IoCartOutline } from "react-icons/io5";
 import { Link, useLocation } from "react-router-dom";
 import HeaderLogo from "../images/Header Logo.png";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FaCircleUser, FaRegHeart } from "react-icons/fa6";
+import { ImSearch } from "react-icons/im";
+import { GrCart } from "react-icons/gr";
 
 const NavBarcomp = () => {
   const navMenuList = [
@@ -21,7 +21,7 @@ const NavBarcomp = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 z-20 bg-white w-full min-h-20 px-7 flex flex-row gap-5 flex-wrap justify-between items-center shadow-md shadow-gray-800">
+    <nav className="fixed top-0 max-sm:py-5 z-20 bg-white w-full min-h-20 px-7 flex flex-row gap-5 flex-wrap justify-between items-center shadow-md shadow-gray-800">
       <div className="w-[200px] h-full">
         <Link to={"/"}>
           <img
@@ -31,7 +31,7 @@ const NavBarcomp = () => {
           />
         </Link>
       </div>
-      <div className="w-[900px] font-medium h-full flex flex-row flex-wrap justify-center items-center gap-5">
+      <div className="w-[900px] hidden  font-medium h-full 2xl:flex xl:flex flex-row flex-wrap justify-center items-center gap-5">
         {navMenuList.map((value, index) => (
           <Link key={index} to={value.path}>
             <span
@@ -49,10 +49,11 @@ const NavBarcomp = () => {
       </div>
 
       <div className="w-[150px] h-full flex flex-row justify-end items-center gap-4">
-        <BsSearch className="text-xl text-blue-950 cursor-pointer" />
-        <GoHeart className="text-xl text-blue-950 cursor-pointer" />
-        <IoCartOutline className="text-xl text-blue-950 cursor-pointer" />
-        <CgProfile className="text-xl text-blue-950 cursor-pointer" />
+        <ImSearch className="text-2xl font-bold text-blue-950 cursor-pointer" />
+        <FaRegHeart className="text-2xl text-blue-950 cursor-pointer" />
+        <GrCart className="text-2xl text-blue-950 cursor-pointer" />
+        <FaCircleUser className="text-2xl text-blue-950 cursor-pointer" />
+        <GiHamburgerMenu  className="xl:max-2xl:hidden font-bold text-2xl text-blue-950 cursor-pointer" />
       </div>
     </nav>
   );
