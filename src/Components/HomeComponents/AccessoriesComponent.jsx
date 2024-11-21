@@ -31,14 +31,14 @@ const AccessoriesSection = () => {
         {data.map((value, index) => (
           <Fragment key={index}>
             <Link to={"/accessories"}>
-            <div className="max-sm:w-[300px] hover:scale-105 hover:delay-150 hover:ease-out hover:duration-150 relative min-w-[450px] min-h-[300px] flex flex-col justify-center items-center">
+            <div className="max-sm:w-[300px] hover:scale-105 hover:delay-150 hover:ease-out hover:duration-150 relative w-[450px] min-h-[300px] flex flex-col justify-center items-center">
                 <img
                   src={value.image}
                   alt="Exhaust"
                   className={`min-h-[300px] max-sm:w-[300px] max-sm:h-[200px] bg-${BlackVarient()} w-full rounded-lg absolute top-0 sm:max-2xl:right-0 sm:max-2xl:left-0 bottom-0`}
                 />
                 <div
-                  className={`min-w-[80px] max-sm:left-24 top-4 left-4 py-4 flex flex-col items-center justify-evenly absolute bg-gradient-to-r from-[${DarkVarient()}] to-[${LightVarient()}] outline-none rounded-xl text-${WhiteVarient()}`}
+                  className={`min-w-[80px] top-4 left-4 py-4 flex flex-col items-center justify-evenly absolute bg-gradient-to-r from-[${DarkVarient()}] to-[${LightVarient()}] outline-none rounded-xl text-${WhiteVarient()}`}
                 >
                   <p>Upto</p>
                   <p>10%</p>

@@ -54,7 +54,7 @@ const SparesByBikeComp = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex max-sm:w-[200px] flex-col gap-3">
       <h3 className="font-bold">SPARES BY BIKE</h3>
       <ul className="w-[100px] flex flex-col gap-2">
         {sparesByBike.map((value, index) => (
@@ -147,7 +147,7 @@ const FooterComp = () => {
         </div>
       </div>
 
-      <div className="w-full min-h-[80px] px-20 bg-gradient-to-b from-[#0E4257] to-[#058CA6] flex flex-row flex-wrap gap-5 justify-between text-gray-300 items-center">
+      <div className="w-full min-h-[80px] max-sm:py-4 px-20 bg-gradient-to-b from-[#0E4257] to-[#058CA6] flex flex-row flex-wrap gap-5 justify-between text-gray-300 items-center">
         <div className="w-[400px] flex flex-col items-center justify-start gap-[8px]">
           <p
             className="flex gap-2 font-[500]"
@@ -160,7 +160,7 @@ const FooterComp = () => {
           </p>
           <p>91+ 8344024735</p>
         </div>
-        <div className="w-[400px] h-full border-r-2 border-l-2 border-black flex flex-col items-center justify-start gap-[8px]">
+        <div className="w-[400px] h-full max-sm:border-none border-r-2 border-l-2 border-black flex flex-col items-center justify-start gap-[8px]">
           <p
             className="flex gap-2 font-[500]"
             style={{ textShadow: "3px 3px 4px #000000" }}

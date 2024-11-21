@@ -21,13 +21,13 @@ const NavBarcomp = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 max-sm:py-5 z-20 bg-white w-full min-h-20 px-7 flex flex-row gap-5 flex-wrap justify-between items-center shadow-md shadow-gray-800">
-      <div className="w-[200px] h-full">
+    <nav className="fixed top-0 max-sm:py-5 max-sm:gap-1 z-20 bg-white w-full min-h-20 px-7 flex flex-row gap-5 flex-wrap justify-between items-center shadow-md shadow-gray-800">
+      <div className="w-[200px] max-sm:w-[100px] h-full">
         <Link to={"/"}>
           <img
             src={HeaderLogo}
             alt="logo"
-            className="w-[200px] h-fit  cursor-pointer"
+            className="w-[200px] h-fit max-sm:w-[100px]  cursor-pointer"
           />
         </Link>
       </div>
@@ -48,7 +48,7 @@ const NavBarcomp = () => {
         ))}
       </div>
 
-      <div className="w-[150px] h-full flex flex-row justify-end items-center gap-4">
+      <div className="w-[150px] max-sm:w-[120px] h-full flex flex-row justify-end items-center gap-4">
         <ImSearch className="text-2xl font-bold text-blue-950 cursor-pointer" />
         <FaRegHeart className="text-2xl text-blue-950 cursor-pointer" />
         <GrCart className="text-2xl text-blue-950 cursor-pointer" />

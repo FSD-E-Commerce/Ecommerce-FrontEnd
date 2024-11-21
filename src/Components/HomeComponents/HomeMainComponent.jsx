@@ -16,6 +16,9 @@ const Home = () => {
         <section>
           <HeroSection/>
         </section>
+        {/* <section className="h-[90vh] w-screen flex items-center justify-center ">
+          <AutoPlay/>
+        </section> */}
         <section>
           <SearchByBike/>
         </section>
