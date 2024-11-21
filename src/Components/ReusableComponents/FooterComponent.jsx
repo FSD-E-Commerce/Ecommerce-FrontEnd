@@ -150,8 +150,8 @@ const FooterComp = () => {
       <div className="w-full min-h-[80px] max-sm:py-4 px-20 bg-gradient-to-b from-[#0E4257] to-[#058CA6] flex flex-row flex-wrap gap-5 justify-between text-gray-300 items-center">
         <div className="w-[400px] flex flex-col items-center justify-start gap-[8px]">
           <p
-            className="flex gap-2 font-[500]"
-            style={{ textShadow: "3px 3px 4px #000000" }}
+            className="flex gap-2 font-[500] cursor-pointer"
+            style={{ textShadow: "0px 0px 6px #000000" }}
           >
             <span>
               <FaWhatsappSquare className="text-green-500 mt-[2px] text-xl" />
@@ -162,11 +162,11 @@ const FooterComp = () => {
         </div>
         <div className="w-[400px] h-full max-sm:border-none border-r-2 border-l-2 border-black flex flex-col items-center justify-start gap-[8px]">
           <p
-            className="flex gap-2 font-[500]"
-            style={{ textShadow: "3px 3px 4px #000000" }}
+            className="flex gap-2 font-[500] cursor-pointer"
+            style={{ textShadow: "0px 0px 6px #000000" }}
           >
             <span>
-              <FcGoogle className="mt-[2px] text-xl" />
+              <FcGoogle className="mt-[2px] text-xl " />
             </span>
             GMAIL
           </p>
@@ -175,15 +175,18 @@ const FooterComp = () => {
         <div className=" w-[400px] justify-center items-center flex flex-col gap-3">
           <p
             className="font-[500]"
-            style={{ textShadow: "3px 3px 4px #000000" }}
+            style={{ textShadow: "0px 0px 6px #000000" }}
           >
             STAY IN TOUCH
           </p>
-          <div className="flex flex-row flex-wrap justify-center text-xl items-center text-black gap-6 text-[1.40rem]">
-            <FaXTwitter />
-            <RiInstagramFill />
-            <FaFacebookF />
-            <FaYoutube />
+          <div className="flex flex-row flex-wrap justify-center text-xl items-center text-black gap-6">
+            <FaXTwitter className="text-black cursor-pointer text-2xl" />
+            <RiInstagramFill className="text-pink-700 cursor-pointer text-2xl" />
+            <FaFacebookF
+              className="text-blue-800 cursor-pointer text-2xl"
+              style={{ textShadow: "px px 5px #FFFFFF" }}
+            />
+            <FaYoutube className="text-red-800 cursor-pointer text-2xl" />
           </div>
         </div>
       </div>
