@@ -21,7 +21,8 @@ const NavBarcomp = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 max-sm:py-5 max-sm:gap-1 z-20 bg-white w-full min-h-20 px-7 flex flex-row gap-5 flex-wrap justify-between items-center shadow-md shadow-gray-800">
+    <div className="w-full fixed top-0 z-20 h-full flex flex-col ">
+      <nav className="max-sm:py-5 max-sm:gap-1 bg-white w-full min-h-20 px-7 flex flex-row gap-5 flex-wrap justify-between items-center shadow-md shadow-gray-800">
       <div className="w-[200px] max-sm:w-[100px] h-full">
         <Link to={"/"}>
           <img
@@ -49,13 +50,44 @@ const NavBarcomp = () => {
       </div>
 
       <div className="w-[150px] max-sm:w-[120px] h-full flex flex-row justify-end items-center gap-4">
-        <ImSearch className="text-2xl font-bold text-blue-950 cursor-pointer" />
-        <FaRegHeart className="text-2xl text-blue-950 cursor-pointer" />
-        <GrCart className="text-2xl text-blue-950 cursor-pointer" />
-        <FaCircleUser className="text-2xl text-blue-950 cursor-pointer" />
-        <GiHamburgerMenu  className="xl:hidden font-bold text-2xl text-blue-950 cursor-pointer" />
+        <Link>
+        <ImSearch className="text-2xl font-bold text-blue-950" />
+        </Link>
+        <Link>
+        <FaRegHeart className="text-2xl text-blue-950" />
+        </Link>
+       <Link>
+       <GrCart className="text-2xl text-blue-950" />
+       </Link>
+       <Link>
+       <FaCircleUser className="text-2xl text-blue-950" />
+       </Link>
+       <button> 
+        <GiHamburgerMenu className="xl:hidden font-bold text-2xl text-blue-950" />
+       </button>
       </div>
-    </nav>
+      </nav>
+      
+      <div className="w-full h-full">
+        <div className="w-[300px] h-[500px] flex flex-col items-center justify-start  absolute right-0 bg-white shadow-md shadow-gray-800">
+        {navMenuList.map((value, index) => (
+          <Link key={index} to={value.path}>
+            <div
+              className={`w-[300px] h-[50px]  ${
+                value.path === location.pathname
+                  ? " bg-gradient-to-r from-[#058CA6] to-[#0E4257] text-white border-b-[3px] border-b-[#0E4257]"
+                  : " text-[#0E4257]"
+              }
+              text-black font-medium hover:rounded-none hover:border-solid hover:border-b-[3px] hover:border-b-[#0E4257] `}
+            >
+              {value.page}
+            </div>
+          </Link>
+        ))}
+
+        </div>
+      </div>
+    </div>
   );
 };
 
