@@ -53,7 +53,7 @@ const NavBarcomp = () => {
         <FaRegHeart className="text-2xl text-blue-950 cursor-pointer" />
         <GrCart className="text-2xl text-blue-950 cursor-pointer" />
         <FaCircleUser className="text-2xl text-blue-950 cursor-pointer" />
-        <GiHamburgerMenu  className="xl:max-2xl:hidden font-bold text-2xl text-blue-950 cursor-pointer" />
+        <GiHamburgerMenu  className="xl:hidden font-bold text-2xl text-blue-950 cursor-pointer" />
       </div>
     </nav>
   );
