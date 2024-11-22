@@ -1,167 +1,139 @@
-import { AiOutlineHeart } from "react-icons/ai";
+import React, { useState } from "react";
+import { CiHeart } from "react-icons/ci";
 import { BiShoppingBag } from "react-icons/bi";
 import ReactImageGallery from "react-image-gallery";
 import Rater from "react-rater";
-import "react-rater/lib/react-rater.css";
 
-const ProductDetail = () => {
-  const productDetailItem = {
-    images: [
-      {
-        original:
-          "https://4.bp.blogspot.com/-LAMcP2zbjIQ/UHK_iZ5OauI/AAAAAAAAALA/x2Fau3cGGMQ/s1600/Bike+Racing.jpg",
-        thumbnail:
-          "https://4.bp.blogspot.com/-LAMcP2zbjIQ/UHK_iZ5OauI/AAAAAAAAALA/x2Fau3cGGMQ/s1600/Bike+Racing.jpg",
-      },
-      {
-        original:
-          "https://www.shutterstock.com/shutterstock/photos/270155639/display_1500/stock-photo-various-car-parts-and-accessories-isolated-on-black-background-270155639.jpg",
-        thumbnail:
-          "https://www.shutterstock.com/shutterstock/photos/270155639/display_1500/stock-photo-various-car-parts-and-accessories-isolated-on-black-background-270155639.jpg",
-      },
-      {
-        original:
-          "https://www.shutterstock.com/shutterstock/photos/534126484/display_1500/stock-photo-car-parts-on-background-d-rendering-534126484.jpg",
-        thumbnail:
-          "https://www.shutterstock.com/shutterstock/photos/534126484/display_1500/stock-photo-car-parts-on-background-d-rendering-534126484.jpg",
-      },
-      {
-        original:
-          "https://www.shutterstock.com/shutterstock/photos/534126484/display_1500/stock-photo-car-parts-on-background-d-rendering-534126484.jpg",
-        thumbnail:
-          "https://www.shutterstock.com/shutterstock/photos/534126484/display_1500/stock-photo-car-parts-on-background-d-rendering-534126484.jpg",
-      },
-      {
-        original:
-          "https://www.shutterstock.com/shutterstock/photos/270155639/display_1500/stock-photo-various-car-parts-and-accessories-isolated-on-black-background-270155639.jpg",
-        thumbnail:
-          "https://www.shutterstock.com/shutterstock/photos/270155639/display_1500/stock-photo-various-car-parts-and-accessories-isolated-on-black-background-270155639.jpg",
-      },
-    ],
-    title: "Sample Product",
-    reviews: "24",
-    availability: true,
-    brand: "BrandName",
-    category: "CategoryName",
-    price: "99.99",
-    previousPrice: "129.99",
-    description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem exercitationem voluptate sint eius ea assumenda provident eos repellendus qui neque! Velit ratione illo maiores voluptates commodi eaque illum, laudantium non!",
-    color: ["red", "blue", "green"],
+const ProductDetailItems = () => {
+  const [selectedColor, setSelectedColor] = useState(null);
+  const [count, setCount] = useState(1);
+
+  const PlusButton = () => {
+    setCount(count + 1);
+  };
+  const MinusButton = () => {
+    if (count > 0) setCount(count - 1);
   };
 
-  const plusMinuceButton =
-    "flex h-8 w-8 cursor-pointer items-center justify-center border border-gray-300 duration-100 hover:bg-neutral-100 focus:ring-2 focus:ring-gray-500 active:ring-2 active:ring-gray-500";
+  const ProductDetail = {
+    images: [
+      { original: "https://motocare.co.in/storage/products/1729075597_670f998d56604.png", thumbnail: "https://motocare.co.in/storage/products/1729075597_670f998d56604.png" },
+      { original: "https://motocare.co.in/storage/products/1729075692_670f99ece7750.png", thumbnail: "https://motocare.co.in/storage/products/1729075692_670f99ece7750.png" },
+      { original: "https://motocare.co.in/storage/products/1729075701_670f99f546c82.png", thumbnail: "https://motocare.co.in/storage/products/1729075701_670f99f546c82.png" },
+    ],
+    title: "Product Title",
+    reviews: "25",
+    availability: true,
+    brand: "Brand Name",
+    category: "Category Name",
+    price: "999",
+    previousPrice: "1,299",
+    description: "This is a sample product description.",
+    colors: ["black", "white", "red"],
+  };
+
+  const handleColorSelect = (color) => {
+    setSelectedColor(color);
+  };
 
   return (
-    <section className="container mx-auto max-w-[1200px] py-5 lg:grid lg:grid-cols-2 lg:gap-12 lg:py-10">
-      <div className="container mx-auto px-4">
-        <ReactImageGallery
-          showBullets={false}
-          showFullscreenButton={false}
-          showPlayButton={false}
-          items={productDetailItem.images}
-        />
-      </div>
-
-      <div className="mx-auto px-5 lg:px-8">
-        <h2 className="pt-3 text-2xl font-bold lg:pt-0">
-          {productDetailItem.title}
-        </h2>
-        <div className="mt-2 flex items-center">
-          <Rater
-            style={{ fontSize: "20px" }}
-            total={5}
-            interactive={false}
-            rating={3.5}
+    <div className="container mx-auto p-4">
+      <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex-1">
+          <ReactImageGallery
+            showBullets={true}
+            showThumbnails={true}
+            showFullscreenButton={false}
+            showPlayButton={false}
+            items={ProductDetail.images}
           />
-          <p className="ml-3 text-sm text-gray-400">
-            ({productDetailItem.reviews} reviews)
+        </div>
+
+        <div className="flex-1 space-y-4">
+          <h2 className="text-2xl font-bold text-gray-800">
+            {ProductDetail.title}
+          </h2>
+          <div className="flex items-center space-x-2">
+            <Rater className="flex" total={5} interactive={true} rating={3.5} />
+            <p className="text-gray-600 text-sm">
+              ({ProductDetail.reviews} reviews)
+            </p>
+          </div>
+          <p className="text-gray-700">
+            Availability:{" "}
+            {ProductDetail.availability ? (
+              <span className="text-green-600 font-medium">In Stock</span>
+            ) : (
+              <span className="text-red-600 font-medium">Out of Stock</span>
+            )}
           </p>
-        </div>
+          <p className="text-gray-700">
+            Brand: <span className="font-medium">{ProductDetail.brand}</span>
+          </p>
+          <p className="text-gray-700">
+            Category:{" "}
+            <span className="font-medium">{ProductDetail.category}</span>
+          </p>
+          <p className="text-gray-800 text-xl">
+            Rs {ProductDetail.price}{" "}
+            <span className="line-through text-gray-500 text-base">
+              Rs {ProductDetail.previousPrice}
+            </span>
+          </p>
+          <p className="text-gray-600">{ProductDetail.description}</p>
 
-        <p className="mt-5 font-bold">
-          Availability:{" "}
-          {productDetailItem.availability ? (
-            <span className="text-green-600">In Stock</span>
-          ) : (
-            <span className="text-red-600">Out of Stock</span>
-          )}
-        </p>
-
-        <p className="font-bold mt-2">
-          Brand: <span className="font-normal">{productDetailItem.brand}</span>
-        </p>
-        <p className="font-bold mt-1">
-          Category:{" "}
-          <span className="font-normal">{productDetailItem.category}</span>
-        </p>
-
-        <p className="mt-4 text-3xl font-bold text-violet-900">
-          ${productDetailItem.price}{" "}
-          <span className="text-xs text-gray-400 line-through">
-            ${productDetailItem.previousPrice}
-          </span>
-        </p>
-
-        <p className="pt-5 text-sm leading-5 text-gray-500">
-          {productDetailItem.description}
-        </p>
-
-        <div className="mt-6">
-          <p className="pb-2 text-xs text-gray-500">Color</p>
-          <div className="flex gap-2">
-            {productDetailItem.color.map((color, index) => (
-              <div
-                key={index}
-                className={`h-8 w-8 cursor-pointer rounded-full border-2 border-transparent transition-all duration-200 hover:border-${color}-500 focus:ring-2 focus:ring-${color}-500 active:ring-2 active:ring-${color}-500`}
-                style={{ backgroundColor: color }}
-                aria-label={`Select ${color} color`}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-6">
-          <p className="pb-2 text-xs text-gray-500">Quantity</p>
-          <div className="flex items-center">
-            <button
-              className={`${plusMinuceButton}`}
-              aria-label="Decrease quantity"
-            >
-              −
-            </button>
-            <div className="flex h-8 w-8 cursor-text items-center justify-center border-t border-b active:ring-gray-500">
-              1
+          <div>
+            <p className="text-gray-700 font-medium">Color</p>
+            <div className="flex space-x-2 mt-2">
+              {ProductDetail.colors.map((color, index) => (
+                <div
+                  key={index}
+                  className={`w-8 h-8 rounded-full border-2 ${
+                    selectedColor === color ? "border-black" : "border-gray-300"
+                  } cursor-pointer`}
+                  style={{ backgroundColor: color }}
+                  onClick={() => handleColorSelect(color)}
+                  aria-label={`Select ${color} color`}
+                />
+              ))}
             </div>
-            <button
-              className={`${plusMinuceButton}`}
-              aria-label="Increase quantity"
-            >
-              +
+            {selectedColor && (
+              <p className="mt-2 text-sm text-gray-600">
+                Selected Color: {selectedColor}
+              </p>
+            )}
+          </div>
+
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2">
+              <button
+                className="px-4 py-2 border rounded-lg bg-gray-100 hover:bg-gray-200"
+                onClick={MinusButton}
+              >
+                -
+              </button>
+              <div className="text-gray-800">{count}</div>
+              <button
+                className="px-4 py-2 border rounded-lg bg-gray-100 hover:bg-gray-200"
+                onClick={PlusButton}
+              >
+                +
+              </button>
+            </div>
+          </div>
+
+          <div className="flex space-x-4">
+            <button className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 border-none mt-10">
+              <BiShoppingBag className="mr-2" /> Add to Cart
+            </button>
+            <button className="flex items-center px-4 py-2 text-gray-700 rounded-lg hover:bg-gray-100 border-none mt-10">
+              <CiHeart className="mr-2" /> Add to Wishlist
             </button>
           </div>
-        </div>
-
-        <div className="mt-7 flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
-          <button
-            className="flex h-12 w-full lg:w-1/3 items-center justify-center bg-blue-400 text-white rounded-lg transition-all duration-300 hover:bg-blue-800 focus:ring-2 focus:ring-blue-500"
-            aria-label="Add to cart"
-          >
-            <BiShoppingBag className="mx-2 text-lg" />
-            Add to Cart
-          </button>
-          <button
-            className="flex h-12 w-full lg:w-1/3 items-center justify-center bg-black text-white rounded-lg transition-all duration-300 hover:bg-gray-800 focus:ring-2 focus:ring-black"
-            aria-label="Add to wishlist"
-          >
-            <AiOutlineHeart className="mx-2 text-lg" />
-            Wishlist
-          </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default ProductDetail;
+export default ProductDetailItems;
