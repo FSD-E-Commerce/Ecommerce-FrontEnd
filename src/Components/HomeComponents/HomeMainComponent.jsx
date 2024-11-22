@@ -11,7 +11,9 @@ import HomeRegister from "./RegisterComponent";
 const Home = () => {
   return (
     <>
-      <NavBarcomp />
+      <header>
+        <NavBarcomp />
+      </header>
       <main className="relative top-16">
         <section>
           <HeroSection/>
