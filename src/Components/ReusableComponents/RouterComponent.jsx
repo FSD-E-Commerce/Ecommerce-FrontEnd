@@ -19,14 +19,14 @@ const ParentRouter = () => {
           <Route index element={<Home/>}/>
           <Route path="/bike" element={<BikeCardMain/>}/>
 
-          <Route path="/accessories" element={<AccessoriesMainComp/>}/>
+          {/* <Route path="/accessories" element={<AccessoriesMainComp/>}/>
             <Route index element={<BikeProtectionMain/>}>
               <Route path="/accessories/bike-protection" element={<BikeProtectionMain/>}/>
             </Route>
             <Route>
               <Route path="/accessories/accessories" element={<AccessoriesMainComp/>}/>
             </Route>
-          </Route>
+          </Route> */}
         </Routes>
     );
   };
