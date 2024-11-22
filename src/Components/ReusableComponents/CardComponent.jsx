@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 import { BlackVarient, DarkVarient, LightVarient, WhiteVarient } from "../ColorComponent/ColorComponent";
 // import { DarkVarient ,LightVarient, WhiteVarient,BlackVarient} from "../ColorComponent/ColorComponent";
 
-const CardMaping = ({ carddata }) => {
-  const { image, brand, sparename, discription,price, path } =
-    carddata;
+export const CardMaping = ({ value }) => {
+  const { image, brand, sparename, discription, price, path } =
+    value;
   return (
     <>
       <div class={`w-[330px] max-h-[500px] mt-20 flex flex-col overflow-hidden rounded-xl shadow-lg shadow-black text-[${DarkVarient()}] `}>
@@ -120,7 +120,7 @@ const ReusableCard = () => {
     <>
       <div className="w-full h-full flex justify-center items-center flex-wrap gap-11">
         {data.map((value, index) => (
-          <CardMaping key={index} carddata={value} />
+          <CardMaping key={index} value={value} />
         ))}
       </div>
     </>
